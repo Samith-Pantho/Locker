@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  locker:
+    build: .
+    ports:
+      - "8456:8456"
+
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
